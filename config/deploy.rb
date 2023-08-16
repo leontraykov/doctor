@@ -2,7 +2,12 @@
 lock "~> 3.17.3"
 
 set :application, "doctor"
-set :repo_url, "git@example.com:leontraykov/doctor.git"
+set :repo_url, "git@github.com:leontraykov/doctor.git"
+
+set :rbenv_type, :user
+set :rbenv_ruby, '3.2.2'
+
+set :puma_preload_app, true
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
