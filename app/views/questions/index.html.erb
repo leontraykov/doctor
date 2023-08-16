@@ -1,14 +1,32 @@
-<div class="w-full">
-  <div class="h-48 w-full rounded mb-5 p-3 bg-gray-100">
-    <%= turbo_frame_tag "answer" %>
-  </div>
+<div class="bg-white">
+  <section class="cover bg-blue-teal-gradient relative bg-blue-600 px-4 sm:px-8 lg:px-16 xl:px-40 2xl:px-64 overflow-hidden py-48 flex
+  items-center justify-center min-h-screen">
+    <div class="h-full absolute top-0 left-0 z-0">
+      <%= image_tag "cover-bg.jpg", alt:"", class:"w-full h-full object-cover opacity-20" %>
+    </div>
 
-  <%= turbo_frame_tag "new_question", target: "_top" do %>
-    <%= form_tag questions_path, class: 'w-full' do |f| %>
-      <input type="text"
-             class="w-full rounded"
-             name="question[question]"
-             placeholder="Type your question">
-    <% end %>
-  <% end %>
+    <div class="w-3/4 relative z-10 h-100 lg:mt-16">
+      <p class="text-blue-100 text-2xl md:text-3xl leading-snug mt-4">We are online 7/24/365 for you!</p>
+      <span class="text-blue-100 text-xl md:text-2xl leading-snug mt-4">Here you can ask our digital assistant about schedule, services, and more.</span>
+      <!-- Start: Answer Frame -->
+      <div class="h-48 w-full rounded my-5 p-3 bg-gray-100">
+          <%= turbo_frame_tag "answer" %>
+      </div>
+      <!-- End: Answer Frame -->
+
+      <!-- Start: Question Form -->
+      <%= turbo_frame_tag "new_question", target: "_top" do %>
+          <%= form_tag questions_path, class: 'w-full' do |f| %>
+              <input 
+                  type="text"
+                  class="w-full rounded py-2 px-4"
+                  name="question[question]"
+                  placeholder="Type your question">
+          <% end %>
+      <% end %>
+      <!-- End: Question Form -->
+
+    </div>
+  </section>
 </div>
+
