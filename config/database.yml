@@ -85,5 +85,5 @@ test:
 production:
   <<: *default
   database: my_gpt_production
-  username: my_gpt
+  username: postgres
   password: postgres
