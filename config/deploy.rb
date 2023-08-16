@@ -9,7 +9,12 @@ set :rbenv_ruby, '3.2.2'
 
 set :puma_preload_app, true
 
-# Default branch is :master
+set :branch, :main
+
+append :linked_files, 'config/master.key'
+append :linked_files, 'config/credentials.yml.enc'
+
+# Default branch is :main
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name

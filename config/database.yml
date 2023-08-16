@@ -86,4 +86,4 @@ production:
   <<: *default
   database: my_gpt_production
   username: my_gpt
-  password: <%= ENV["MY_GPT_DATABASE_PASSWORD"] %>
+  password: postgres
