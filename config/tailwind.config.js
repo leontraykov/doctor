@@ -42,7 +42,7 @@ module.exports = {
     opacity: ['responsive', 'hover', 'focus'],
   },
   plugins: [
-    require('@tailwindcss'),
+    require('@tailwind'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/typography'),
