@@ -21,10 +21,7 @@
   <body class="antialiased bg-white font-sans text-gray-900">
 
     <%= render "pages/navigation" %>
-  <div data-controller="hello">
-    <input data-hello-target="name" type="text">
-    <button data-action="click->hello#greet">Greet</button>
-  </div>
+
       <%= yield %>
 
     <%= render "pages/footer" %>
